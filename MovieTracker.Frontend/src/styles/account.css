@@ -1,0 +1,167 @@
+main:has(#profile-name),
+main:has(#public-collections-heading),
+main:has(#notifications-filter) {
+  width: min(calc(100% - 32px), 1020px);
+}
+
+main:has(#profile-name) > button:first-child,
+main:has(#public-collections-heading) > button:first-child,
+main:has(#notifications-filter) > button:first-child {
+  padding-inline: 0;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+main:has(#profile-name) > button:first-child:hover,
+main:has(#public-collections-heading) > button:first-child:hover,
+main:has(#notifications-filter) > button:first-child:hover {
+  border-color: transparent;
+  background: transparent;
+  color: var(--text);
+}
+
+section:has(> #profile-name),
+main:has(#public-collections-heading) > header {
+  margin-block: 16px 28px;
+  padding: clamp(18px, 4vw, 36px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--surface-hover), var(--surface));
+}
+
+section:has(> #profile-name) > img,
+main:has(#public-collections-heading) > header > img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 14px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#profile-name,
+main:has(#public-collections-heading) > header h1 {
+  margin-block: 0 8px;
+}
+
+section:has(> #profile-name) > p,
+main:has(#public-collections-heading) > header p {
+  max-width: 65ch;
+  margin-block: 6px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+main:has(#profile-name) > section:not(:has(> #profile-name)),
+main:has(#public-collections-heading) > section {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+main:has(#profile-name) > section > h2,
+main:has(#public-collections-heading) > section > h2 {
+  margin-top: 0;
+}
+
+section:has(> #profile-name) > details,
+section:has(> #profile-collections) > details {
+  margin-block: 16px;
+}
+
+section:has(> #profile-name) summary,
+section:has(> #profile-collections) summary {
+  width: fit-content;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+section:has(> #profile-name) summary:hover,
+section:has(> #profile-collections) summary:hover {
+  background: var(--surface-hover);
+}
+
+section:has(> #profile-name) details form,
+section:has(> #profile-collections) details form {
+  margin-block: 12px 0;
+}
+
+section:has(> #profile-name) input:not([type="checkbox"]),
+section:has(> #profile-collections) input:not([type="checkbox"]) {
+  width: 100%;
+  background: var(--background);
+}
+
+#collection-is-public {
+  min-height: auto;
+  margin: 0 5px 0 0;
+  accent-color: var(--amber);
+}
+
+label[for="collection-is-public"] {
+  display: inline;
+}
+
+section:has(> #profile-collections) .movie-reviews__card h3 button,
+section:has(> #profile-reviews) .movie-reviews__card h3 button {
+  padding-inline: 0;
+  border-color: transparent;
+  background: transparent;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+section:has(> #profile-collections) .movie-reviews__card h3 button:hover,
+section:has(> #profile-reviews) .movie-reviews__card h3 button:hover {
+  border-color: transparent;
+  background: transparent;
+  color: var(--amber);
+}
+
+main:has(#profile-reviews) nav[aria-label],
+main:has(#public-reviews-heading) nav[aria-label] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+main:has(#notifications-filter) > p:has(#notifications-filter) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+main:has(#notifications-filter) .movie-reviews__list {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 16px;
+}
+
+main:has(#notifications-filter) .movie-reviews__card time {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+main:has(#notifications-filter) .movie-reviews__card button {
+  margin: 4px 4px 0 0;
+}
+
+@media (max-width: 620px) {
+  main:has(#profile-name) .movie-reviews__list,
+  main:has(#public-collections-heading) .movie-reviews__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

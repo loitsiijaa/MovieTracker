@@ -1,0 +1,63 @@
+.auth-page,
+main:has(#register-email) {
+  width: min(100% - 32px, 440px);
+  padding-top: clamp(28px, 8vh, 80px);
+}
+
+.auth-page > button,
+main:has(#register-email) > button {
+  padding-inline: 0;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+.auth-page h1,
+main:has(#register-email) h1 {
+  margin-block: 16px 20px;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+}
+
+.auth-page form,
+main:has(#register-email) form {
+  display: grid;
+  gap: 16px;
+  padding: clamp(16px, 5vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.auth-page form p,
+main:has(#register-email) form p {
+  margin: 0;
+}
+
+.auth-page label,
+main:has(#register-email) label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.auth-page input,
+main:has(#register-email) input {
+  width: 100%;
+  background: var(--background);
+}
+
+.auth-page form button,
+main:has(#register-email) form button {
+  width: 100%;
+}
+
+main:has(#register-email) small {
+  color: var(--muted);
+}
+
+.auth-page [role="alert"],
+main:has(#register-email) [role="alert"] {
+  color: var(--danger);
+  overflow-wrap: anywhere;
+}
